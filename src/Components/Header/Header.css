@@ -1,0 +1,19 @@
+
+.header {
+    overflow: hidden;
+    background-color: gray;
+    padding: 20px 10px;
+}
+
+.header a.logo {
+    font-size: xxx-large;
+    font-weight: bold;
+    font-family: "Source Sans Pro";
+    color: #0631fd;
+    text-decoration: none;
+}
+.header a.logo-image {
+    padding: 2px;
+}
+
+
