@@ -1,19 +1,66 @@
 
-.header {
-    overflow: hidden;
-    background-color: gray;
-    padding: 20px 10px;
+.nav-bar {
+    background-color: rgba(27, 44, 51, 0.5);
+    display: flex;
+    height: 5em;
+    justify-content: space-between;
+    position: fixed;
+    width: 100vw;
+    margin-top: 0px;
+    top: 0%;
 }
 
-.header a.logo {
+.logo {
     font-size: xxx-large;
     font-weight: bold;
     font-family: "Source Sans Pro";
-    color: #0631fd;
-    text-decoration: none;
+    color: white;
+
 }
-.header a.logo-image {
-    padding: 2px;
+
+.logo-image {
+    color: white;
+    font-size: 4rem;
+}
+
+.header-title-group {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 5px;
+}
+
+.header-buttons-group {
+    display: inline-flex;
+    margin-right: 5px;
+}
+
+.header-explore-input {
+    display: inline-flex;
+    align-items: center;
+}
+.input-box {
+    display: inline-flex;
+}
+.input-label {
+    color: white;
+    font-size: large;
+    font-family: "Source Sans Pro";
+    font-weight: bold;
+    margin-right: 6px;
+    padding-bottom: 4px;
+}
+
+.button {
+    background: none;
+    box-shadow: none;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    font-family: "Source Sans Pro";
+    font-size: large;
+    font-weight: bold;
+    color: white;
 }
 
 
