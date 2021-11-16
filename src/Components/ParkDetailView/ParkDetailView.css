@@ -1,12 +1,13 @@
 .page{
-    margin-top: 70px;
+    background-color: slategray;
+    background-position: center;
+    background-size: cover;
     justify-content: center;
     align-items: center;
 }
 
 .header-container {
     width: 100%;
-    height: 10%;
     position: fixed;
     top: 80px;
     left: 0px;
@@ -14,13 +15,14 @@
 
 }
 .detail-container {
+    margin-top: 0px;
     width: 100%;
-    height: 90%;
+    height: 100%;
     justify-content: left;
     align-items: center;
 }
 .detail-title {
-    margin-top: 200px;
+    margin-top: 128px;
     font-family: "Source Sans Pro";
     font-size: xx-large;
     font-weight: bold;

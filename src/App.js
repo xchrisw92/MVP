@@ -4,6 +4,7 @@ import Parks from "./Components/Parks/Parks";
 import {useEffect, useState} from "react";
 import axios from "axios";
 import ParkDetailView from "./Components/ParkDetailView/ParkDetailView";
+import Footer from "./Components/Footer/Footer";
 
 function App() {
     let [parks, setParks] = useState([]);
@@ -33,13 +34,14 @@ function App() {
     }
 
     return (
-        <div className='page'>
+        <div className='background'>
             <Header getSelectParks={getSelectParks}/>
             {
                 parkDetailView ?
                     <ParkDetailView park={park} api_key={api_key}/> :
                     <Parks parks={parks} detailView={setDetailView}/>
             }
+            <Footer />
         </div>
     );
 }

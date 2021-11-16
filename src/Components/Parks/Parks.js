@@ -3,18 +3,30 @@ import './Parks.css'
 
 const Parks = ({parks, detailView}) =>{
     return(
-        <div className='container'>
-            {
-                parks.map(park => {
-                    return (
-                        <Park
-                            key={park.id}
-                            park={park}
-                            detailView={detailView}
-                        />
-                    )
-                })
-            }
+        <div className='mainPage'>
+            <div className='title-page-group'>
+                <div className='title'>
+                    Find Your Next Adventure
+                </div>
+                <button className='title-button grow'>Explore Parks</button>
+
+            </div>
+            <div className='container'>
+                <div>
+                    {
+                        parks.map(park => {
+                            return (
+                                <Park
+                                    key={park.id}
+                                    park={park}
+                                    detailView={detailView}
+                                />
+                            )
+                        })
+                    }
+
+                </div>
+            </div>
 
         </div>
 

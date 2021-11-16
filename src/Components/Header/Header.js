@@ -57,7 +57,7 @@ const Header = ({getSelectParks}) => {
                 <IconContext.Provider value={{className: 'logo-image'}}>
                     <HiMap/>
                 </IconContext.Provider>
-                <h1 className='logo'>Plan My Adventure</h1>
+                <h1 className='logo'>National Park Explorer</h1>
             </div>
             {
                 explore ?

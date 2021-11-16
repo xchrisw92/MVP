@@ -4,7 +4,7 @@
 }
 
 .active, .accordion:hover {
-    background-color: #8D8741;
+    background-color: #FBEEC1;
     opacity: 75;
     border-radius: 8px;
 }
@@ -12,8 +12,9 @@
 .panel {
     padding: 2px 1px;
     color: black;
-    font-size: medium;
-    background-color: #8D8741;
+    font-size: large;
+    font-family:  "Source Sans Pro";
+    background-color: #FBEEC1;
     border-radius: 8px;
     border: 1px solid black;
     border-top: none;

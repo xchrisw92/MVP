@@ -39,6 +39,8 @@ const Information = ({park}) =>{
     ]
 
     return (
+        <div className='information-page'>
+
         <div className='information-container'>
             <h1 className='information-header'>
                 Information for {park.fullName}
@@ -49,7 +51,7 @@ const Information = ({park}) =>{
                 ))
             }
         </div>
-
+        </div>
 
 
 
