@@ -3,7 +3,10 @@ const Footer = () =>{
     return (
         <div className='footer-container'>
             <div className='footer-text'>
-                Made Possible by the National Park Service API
+                Made Possible by the <a
+                href ={'https://www.nps.gov/subjects/developer/index.htm'}
+                className='footer-link'
+            >National Park Service API </a>
             </div>
             <div className='footer-text'>
                 For more information about national parks,

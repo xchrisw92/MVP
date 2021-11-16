@@ -9,7 +9,7 @@ const Parks = ({parks, detailView, explore, setExplore}) =>{
         <div className='mainPage'>
             <div className='title-page-group'>
                 <div className='title'>
-                    Find Your Next Adventure
+                    Find Your Next <br/> Adventure
                 </div>
                 {
                     explore ?

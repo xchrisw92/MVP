@@ -6,6 +6,7 @@ import {IconContext} from "react-icons";
 const Accordion = ({title, content}) => {
     let [isActive, setIsActive] = useState(false);
 
+
     return (
         <div className='accordion'>
             <div className='accordion-title-group' onClick={(e) => setIsActive(!isActive)}>
