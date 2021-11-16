@@ -23,6 +23,16 @@ const DetailHeader = ({park, information, alert, weather, setInformation, setAle
         return stateFullName;
     }
 
+    const handleWeatherClick = () =>{
+        setWeather(!weather);
+        setAlert(false);
+    }
+
+    const handleAlertClick = () =>{
+        setAlert(!alert);
+        setWeather(false);
+    }
+
     return (
         <header className='detailHeader'>
             <div className='detailHeader-title-group'>
@@ -33,7 +43,7 @@ const DetailHeader = ({park, information, alert, weather, setInformation, setAle
                 </div>
             </div>
             <div className='detailHeader-buttons-group'>
-                    <span onClick={(e) => setAlert(!alert)}
+                    <span onClick={handleAlertClick}
                           className='detailHeader-button-pair grow'>
                         <HiExclamation/>
                         <p>Alerts</p>
@@ -43,7 +53,7 @@ const DetailHeader = ({park, information, alert, weather, setInformation, setAle
                         <HiInformationCircle/>
                         <p>Information</p>
                     </span>
-                <span onClick={(e) => setWeather(!weather)}
+                <span onClick={handleWeatherClick}
                       className='detailHeader-button-pair grow'>
                         <HiCloud/>
                         <p>Weather</p>

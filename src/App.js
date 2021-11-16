@@ -10,6 +10,7 @@ function App() {
     let [parks, setParks] = useState([]);
     let [park, setPark] = useState({});
     let [parkDetailView, setParkDetailView] = useState(false);
+    let [explore, setExplore] = useState(false);
 
     const api_key = 'iniKRKvvMTdJxnoq7Akeftrbwxqpwx0LwhtPuFOF';
 
@@ -35,13 +36,21 @@ function App() {
 
     return (
         <div className='background'>
-            <Header getSelectParks={getSelectParks}/>
+            <Header explore={explore} setExplore={setExplore} getSelectParks={getSelectParks}/>
             {
                 parkDetailView ?
                     <ParkDetailView park={park} api_key={api_key}/> :
-                    <Parks parks={parks} detailView={setDetailView}/>
+                    <Parks
+                        parks={parks}
+                        detailView={setDetailView}
+                        getSelectParks={getSelectParks}
+                        explore={explore}
+                        setExplore={setExplore}
+                    />
             }
-            <Footer />
+            <div className='footer'>
+                <Footer/>
+            </div>
         </div>
     );
 }

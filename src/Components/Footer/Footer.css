@@ -1,0 +1,16 @@
+.footer-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 4px;
+}
+
+.footer-text{
+    font-family: "Source Sans Pro";
+    font-size: 17px;
+    font-weight: normal;
+}
+.footer-link{
+    color: white;
+}

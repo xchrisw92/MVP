@@ -5,18 +5,24 @@ import ParkPlaces from "./ParkPlaces/ParkPlaces";
 import Weather from "./Weather/Weather";
 import DetailHeader from "./DetailHeader/DetailHeader";
 import axios from "axios";
+import Alerts from "./Alerts/Alerts";
 
 const ParkDetailView = ({park, api_key}) => {
     let [information, setInformation] = useState(false);
     let [weather, setWeather] = useState(false);
     let [alert, setAlert] = useState(false);
     let [weatherData, setWeatherData] = useState([]);
+    let [alertData, setAlertData] = useState([]);
 
     const weatherApiKey = '6d39fcf6fbcb4fa9afc213955211011';
     useEffect(()=>{
         axios.get(`https://api.weatherapi.com/v1/current.json?key=${weatherApiKey}&q=${park.addresses[0].postalCode}`)
             .then(result =>{
                 setWeatherData(result.data);
+            })
+        axios.get(`https://developer.nps.gov/api/v1/alerts?parkCode=${park.parkCode}&api_key=${api_key}`)
+            .then(result =>{
+                setAlertData(result.data.data);
             })
     }, [park, api_key])
 
@@ -45,6 +51,11 @@ const ParkDetailView = ({park, api_key}) => {
                             <ParkPlaces parkId={park.parkCode} api_key={api_key}/>
                         </section>
                     </div>
+            }
+            {
+                alert ?
+                    <Alerts alert = {alertData} /> :
+                    null
             }
             {
                 weather ?

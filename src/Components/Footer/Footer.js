@@ -1,8 +1,16 @@
-
+import './Footer.css'
 const Footer = () =>{
     return (
-        <div>
-
+        <div className='footer-container'>
+            <div className='footer-text'>
+                Made Possible by the National Park Service API
+            </div>
+            <div className='footer-text'>
+                For more information about national parks,
+                visit the <a className='footer-link'
+                href={'https://www.nps.gov/index.htm'}
+            >National Parks Website</a>
+            </div>
         </div>
     )
 }

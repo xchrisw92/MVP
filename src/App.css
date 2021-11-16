@@ -13,3 +13,14 @@
     background-repeat: no-repeat;
     z-index: 0;
 }
+.footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 35px;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    text-align: center;
+    z-index: 95;
+}

@@ -5,8 +5,8 @@ import {useState} from "react";
 import {Hint} from "react-autocomplete-hint";
 
 
-const Header = ({getSelectParks}) => {
-    let [explore, setExplore] = useState(false);
+const Header = ({getSelectParks, explore, setExplore}) => {
+
     let [input, setInput] = useState('');
 
     const states = ["Alabama", "Alaska",  "Arkansas", "Arizona", "California", "Colorado", "Connecticut", "District of Columbia",
@@ -31,12 +31,6 @@ const Header = ({getSelectParks}) => {
     }
 
 
-    const handleSignUp = () =>{
-
-    }
-    const handleLogin = () =>{
-
-    }
 
     function handleSubmit(e) {
         e.preventDefault();
@@ -85,12 +79,12 @@ const Header = ({getSelectParks}) => {
                         <button className='button grow'
                                 onClick={() => setExplore(!explore)}>Explore Parks
                         </button>
-                        <button className='button grow'
-                                onClick={handleLogin}>Login
-                        </button>
-                        <button className='button grow'
-                                onClick={handleSignUp}>Sign Up
-                        </button>
+                        {/*<button className='button grow'*/}
+                        {/*        onClick={handleLogin}>Login*/}
+                        {/*</button>*/}
+                        {/*<button className='button grow'*/}
+                        {/*        onClick={handleSignUp}>Sign Up*/}
+                        {/*</button>*/}
                     </div>
             }
 
