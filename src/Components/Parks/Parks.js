@@ -1,7 +1,7 @@
 import Park from "../Park/Park";
 import './Parks.css'
 
-const Parks = ({parks}) =>{
+const Parks = ({parks, detailView}) =>{
     return(
         <div className='container'>
             {
@@ -9,7 +9,9 @@ const Parks = ({parks}) =>{
                     return (
                         <Park
                             key={park.id}
-                            park={park}/>
+                            park={park}
+                            detailView={detailView}
+                        />
                     )
                 })
             }

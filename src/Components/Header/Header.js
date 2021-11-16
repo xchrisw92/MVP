@@ -9,7 +9,6 @@ const Header = ({getSelectParks}) => {
     let [explore, setExplore] = useState(false);
     let [input, setInput] = useState('');
 
-
     const states = ["Alabama", "Alaska",  "Arkansas", "Arizona", "California", "Colorado", "Connecticut", "District of Columbia",
         "Delaware", "Florida", "Georgia", "Hawaii", "Iowa", "Idaho", "Illinois", "Indiana", "Kansas",
         "Kentucky", "Louisiana", "Massachusetts", "Maryland", "Maine", "Michigan", "Minnesota", "Missouri", "Mississippi",
@@ -31,6 +30,7 @@ const Header = ({getSelectParks}) => {
         "Washington": "WA", "West Virginia": "WV", "Wisconsin": "WI", "Wyoming": "WY"
     }
 
+
     const handleSignUp = () =>{
 
     }
@@ -50,13 +50,14 @@ const Header = ({getSelectParks}) => {
         setInput('');
     }
 
+
     return (
-        <nav className='nav-bar'>
-            <div className='header-title-group'>
+        <nav className='nav-bar shadow'>
+            <div onClick={() => window.location.reload(false)} className='header-title-group title-grow'>
                 <IconContext.Provider value={{className: 'logo-image'}}>
                     <HiMap/>
                 </IconContext.Provider>
-                <h1 className='logo'>My Website</h1>
+                <h1 className='logo'>Plan My Adventure</h1>
             </div>
             {
                 explore ?
@@ -81,13 +82,13 @@ const Header = ({getSelectParks}) => {
                         </form>
                     </div> :
                     <div className='header-buttons-group'>
-                        <button className='button'
+                        <button className='button grow'
                                 onClick={() => setExplore(!explore)}>Explore Parks
                         </button>
-                        <button className='button'
+                        <button className='button grow'
                                 onClick={handleLogin}>Login
                         </button>
-                        <button className='button'
+                        <button className='button grow'
                                 onClick={handleSignUp}>Sign Up
                         </button>
                     </div>

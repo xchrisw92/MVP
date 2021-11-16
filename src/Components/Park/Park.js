@@ -1,12 +1,32 @@
 
 import './Park.css'
 
-const Park = ({park}) =>{
+const Park = ({park, detailView}) =>{
+
+    function checkImageArray() {
+        if(park.images[0] !== null){
+            return true;
+        } else return false;
+    }
+
+    const handleDetailClick = (park) => {
+        detailView(park.parkCode);
+    }
+
     return (
-        <div className='park-container-group'>
-            <img className='image' src={park.images[0].url} alt='placeholder' />
-            <h3 className='park-name'>{park.fullName}</h3>
-            <h3 className='park-location'>{park.addresses[0].city}, {park.addresses[0].stateCode}</h3>
+        <div  onClick={(e) => {handleDetailClick(park)}} className='imageHolder shrink-on-hover'>
+            <img className='image'
+                 src={
+                     checkImageArray() ?
+                         park.images[0].url :
+                         'https://placekitten.com/640/360'
+                 }
+                 alt='https://placekitten.com/640/360'
+                 />
+            <div className='caption'>
+                <p className='park-text'>{park.fullName}</p>
+                <p className='park-text'>{park.addresses[0].city}, {park.addresses[0].stateCode}</p>
+            </div>
         </div>
     )
 }

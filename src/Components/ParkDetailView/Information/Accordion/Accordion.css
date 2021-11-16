@@ -1,0 +1,45 @@
+.accordion {
+    width: 80%;
+    height: 20%;
+}
+
+.active, .accordion:hover {
+    background-color: #8D8741;
+    opacity: 75;
+    border-radius: 8px;
+}
+
+.panel {
+    padding: 2px 1px;
+    color: black;
+    font-size: medium;
+    background-color: #8D8741;
+    border-radius: 8px;
+    border: 1px solid black;
+    border-top: none;
+}
+.accordion-title-group {
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 4px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.accordion-title{
+
+    padding: 2px 1px;
+    font-size: x-large;
+    color: black;
+    font-family: "Source Sans Pro";
+    font-weight: bold;
+}
+.accordion-title-arrow{
+    display: flex;
+    flex-direction: row;
+}
+
+.chevron {
+    color: black;
+    font-size: 2rem;
+}

@@ -1,24 +1,58 @@
 
 .park-container-group{
     cursor: pointer;
+    position: relative;
+    padding: 0px;
+    margin-top: 0px;
 }
 
-.park-name{
-font-family: "Source Sans Pro";
-    font-weight: bold;
-    font-size: large;
-    color: white;
-}
-.park-location{
+.park-text{
     font-family: "Source Sans Pro";
-    font-weight: normal;
-    font-size: medium;
+    font-size: large;
+    margin-bottom: 0px;
+    margin-top: 1px;
+    padding: 0px;
     color: white;
 }
 
-.image {
-    width: 100%;
-    height: 100%;
+.imageHolder{
+    /*box-sizing: content-box;*/
+    position: relative;
+    height: 100vh;
+    width: 80vw;
+    padding: 4px;
+    cursor: pointer;
+    z-index: 98;
+}
+
+.imageHolder .image {
+    justify-content: center;
+    width: 85%;
+    height: 90%;
     border-radius: 8px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.imageHolder .caption {
+    position: absolute;
+    bottom: 95px;
+    left: 15px;
+    width: fit-content;
+    height: 50px;
+    background-color: #8D8741;
+    opacity: 90%;
+    border-radius: 8px;
+    text-align: left;
+    padding: 4px;
+}
+
+
+.shrink_on_hover{
+    transform: perspective(1px) translateZ(0);
+    transition-duration: .7s;
+    transition-property: transform;
+}
+
+.shrink-on-hover:hover, .shrink-on-hover:focus, .shrink-on-hover:active {
+    transform: scale(0.97);
 }

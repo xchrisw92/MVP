@@ -1,0 +1,57 @@
+.detailHeader {
+    background-color: #DAAD86;
+    opacity: 75%;
+    display: flex;
+    height: 48px;
+    justify-content: space-between;
+    width: 100%;
+    z-index: 97;
+}
+.detailHeader-title-group {
+    display: flex;
+    align-items: center;
+    padding: 0px 2px;
+    gap: 10px;
+}
+.detailHeader-title-name{
+    font-family: "Source Sans Pro";
+    font-size: xx-large;
+    font-weight: bold;
+    color: black;
+}
+.detailHeader-minor-text-group{
+    font-family: "Source Sans Pro";
+    font-weight: normal;
+    font-size: large;
+    color: black;
+
+}
+.detailHeader-minor-text-items{
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding: 0px;
+}
+
+.detailHeader-buttons-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 5px;
+
+}
+
+
+.grow:hover {
+    transform: scale(1.05);
+    transition-property: transform;
+    transition-duration: .1s;
+}
+
+.detailHeader-button-pair {
+    margin-left: 2px;
+    margin-right: 2px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 1px;
+}

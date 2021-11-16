@@ -1,0 +1,30 @@
+
+.places-holder{
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding: 4px;
+    z-index: 10;
+}
+
+.places-holder .image {
+    width: 95%;
+    height: 90%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.places-holder .caption {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    width: fit-content;
+    height: 25px;
+    background-color: #8D8741;
+    opacity: 90%;
+    border-radius: 8px;
+    text-align: left;
+    padding: 4px;
+}

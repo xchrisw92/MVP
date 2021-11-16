@@ -8,6 +8,11 @@
     width: 100vw;
     margin-top: 0px;
     top: 0%;
+    z-index: 99;
+}
+
+.nav-bar.shadow {
+    box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
 }
 
 .logo {
@@ -19,7 +24,7 @@
 }
 
 .logo-image {
-    color: white;
+    color: indianred;
     font-size: 4rem;
 }
 
@@ -28,6 +33,7 @@
     align-items: center;
     gap: 10px;
     margin-left: 5px;
+    cursor: pointer;
 }
 
 .header-buttons-group {
@@ -41,6 +47,8 @@
 }
 .input-box {
     display: inline-flex;
+    font-family: "Source Sans Pro";
+    font-size: medium;
 }
 .input-label {
     color: white;
@@ -63,4 +71,15 @@
     color: white;
 }
 
+.grow:hover {
+    transform: scale(1.05);
+    transition-property: transform;
+    transition-duration: .1s;
+}
+
+.title-grow:hover {
+    transform: scale(1.02);
+    transition-property: transform;
+    transition-duration: .1s;
+}
 
